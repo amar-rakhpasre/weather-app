@@ -12,10 +12,9 @@ import { Target } from "lucide-react";
 
 function Navbar(){
     const router = useRouter();
-    const {state} = useGlobalContext();
-
-                
-    return (
+    const { state } = useGlobalContext();
+        
+        return (
         <div className="w-full py-4 flex items-center justify-between">
             <div className="left"></div>
             <div className="search-container flex shrink-0 w-full gap-2 sm:w-fit">

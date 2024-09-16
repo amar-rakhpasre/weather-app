@@ -5,11 +5,16 @@ import React from "react";
 import { github } from "../utils/Icons";
 import Themedropdown from "./ThemeDropdown/Themedropdown";
 import SearchDialog from "./SearchDialog/SearchDialog";
+import { useGlobalContext } from "../context/globalContext";
+import { Target } from "lucide-react";
 
 
 
 function Navbar(){
     const router = useRouter();
+    const {state} = useGlobalContext();
+
+                
     return (
         <div className="w-full py-4 flex items-center justify-between">
             <div className="left"></div>
@@ -21,7 +26,7 @@ function Navbar(){
             <Themedropdown />
 
             <Button className="source-code flex items-center gap-2" onClick={()=>{
-                router.push("https//github.com");
+                router.push("https://github.com/amar-rakhpasre");
             }}> {github} Source code</Button>
             </div>
             </div>

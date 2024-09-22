@@ -83,8 +83,8 @@ function Temperature() {
                 <p className='pt-2 capitalize text-lg font-medium'>{description}</p>
             </div>
             <p className='flex items-center gap-2'>
-                <span>Low: {minTemp}°</span>
-                <span>Max: {maxTemp}°</span>
+                <span>Low: <b>{minTemp}°</b></span>
+                <span>Max: <b>{maxTemp}°</b></span>
             </p>
         </div>
     </div>

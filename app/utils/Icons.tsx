@@ -19,6 +19,7 @@ import {
     CalendarDays,
     SunDim,
     CloudFog,
+    Sunrise,
   } from "lucide-react";
   
   export const commandIcon = <Command size={14} />;
@@ -40,4 +41,5 @@ import {
   export const people = <UsersRound size={15} />;
   export const calender = <CalendarDays size={15} />;
   export const sun = <SunDim size={15} />;
-  export const Mist = <CloudFog size={30} />;
+  export const MMist = <CloudFog size={30} />;
+  export const sunrise = <Sunrise  size={15}/>

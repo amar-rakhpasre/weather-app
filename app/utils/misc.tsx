@@ -1,4 +1,5 @@
 import { Description } from "@radix-ui/react-dialog";
+import moment from "moment";
 
 export const kelvinToCelsius = (kelvin: number) =>{
     return Math.round(kelvin - 273.15);
@@ -26,3 +27,8 @@ export const airQualityIndexText = [
         Description: "very poor"
     },
 ]
+
+export const unixToTime = (unix: number, timezone: number) => {
+    return moment.unix(unix).utcOffset(timezone / 60).format("h:mm A");
+  }
+  

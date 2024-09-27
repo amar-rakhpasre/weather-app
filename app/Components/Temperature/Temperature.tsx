@@ -50,18 +50,29 @@ function Temperature() {
 
 
       //live time update
-    useEffect(() => {}, []);
-      //update time every second and mimnute
-    const interval = setInterval(()=>{
-        const localMoment = moment().utcOffset(timezone / 60);
-        // custom format : 24 hour format
-        const formatedTime = localMoment.format("HH:mm:ss");
-        // day of the week
-        const day = localMoment.format("dddd");
-
-        setLocalTime(formatedTime);
-        setCurrentDay(day);
-    }, 1000);
+      useEffect(() => {
+        const interval = setInterval(() => {
+          // Get the local time with timezone adjustment
+          const localMoment = moment().utcOffset(timezone / 60);
+      
+          // Format time in 12-hour format with AM/PM
+          const formatedTime = localMoment.format("h:mm A");
+      
+          // Day of the week
+          const day = localMoment.format("dddd");
+      
+          // Get the hour to determine if it's AM or PM
+          const hour = localMoment.hour();
+          const dayPeriod = hour >= 12 ? "PM" : "AM";
+      
+          // Update state with formatted time and day with AM/PM
+          setLocalTime(formatedTime);
+          setCurrentDay(`${day}`);
+        }, 1000);
+      
+        // Cleanup interval on component unmount
+        return () => clearInterval(interval);
+      }, [timezone]); // Dependency on timezone
 
 
 

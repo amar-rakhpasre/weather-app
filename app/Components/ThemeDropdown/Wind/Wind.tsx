@@ -8,7 +8,7 @@ import React from 'react';
 function Wind() {
     const { forecast } = useGlobalContext();
 
-    const windSpeed = forecast?.wind?.speed;
+    const windSpeed = Math.round(forecast?.wind?.speed);
     const windDir = forecast?.wind?.deg; // Keep the wind direction in degrees without modification
 
     // If wind data is not available, show a skeleton loader
@@ -17,7 +17,7 @@ function Wind() {
     }
 
     return (
-        <div className='pt-6 px-4 h-[10.1rem] border rounded-lg flex flex-col gap-8 dark:bg-dark-grey shadow-sm dark:shadow-none'>
+        <div className='pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-8 dark:bg-dark-grey shadow-sm dark:shadow-none'>
             <h2 className="flex items-center gap-2 font-medium">{wind}Wind: {windSpeed} m/s</h2>
 
             <div className="compass relative flex items-center justify-center">

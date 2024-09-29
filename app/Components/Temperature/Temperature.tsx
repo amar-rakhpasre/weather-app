@@ -21,6 +21,8 @@ function Temperature() {
     const minTemp = kelvinToCelsius(main.temp_min)
     const maxTemp = kelvinToCelsius(main.temp_max)
 
+    // console.log(main)
+
     // state
 
     const [loclaTime, setLocalTime] = useState<string>("");

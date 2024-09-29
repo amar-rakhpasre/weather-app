@@ -5,6 +5,12 @@ export const kelvinToCelsius = (kelvin: number) =>{
     return Math.round(kelvin - 273.15);
 }
 
+// Define the type for the air quality index item
+// interface AirQualityIndex {
+//     rating: number;
+//     Description: string;
+//   } : AirQualityIndex[]
+
 export const airQualityIndexText = [
     {
         rating: 20,
@@ -26,9 +32,11 @@ export const airQualityIndexText = [
         rating: 100,
         Description: "very poor"
     },
-]
+];
+
 
 export const unixToTime = (unix: number, timezone: number) => {
     return moment.unix(unix).utcOffset(timezone / 60).format("h:mm A");
   }
   
+

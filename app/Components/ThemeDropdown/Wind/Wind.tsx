@@ -9,7 +9,7 @@ function Wind() {
     const { forecast } = useGlobalContext();
 
     const windSpeed = forecast?.wind?.speed;
-    const windDir = forecast?.wind?.deg * 553; // Keep the wind direction in degrees without modification
+    const windDir = forecast?.wind?.deg; // Keep the wind direction in degrees without modification
 
     // If wind data is not available, show a skeleton loader
     if (!windSpeed || windDir === undefined) {
@@ -18,7 +18,7 @@ function Wind() {
 
     return (
         <div className='pt-6 px-4 h-[10.1rem] border rounded-lg flex flex-col gap-8 dark:bg-dark-grey shadow-sm dark:shadow-none'>
-            <h2 className="flex items-center gap-2 font-medium">{wind} Wind</h2>
+            <h2 className="flex items-center gap-2 font-medium">{wind}Wind: {windSpeed} m/s</h2>
 
             <div className="compass relative flex items-center justify-center">
                 <div className="image relative">
@@ -30,7 +30,7 @@ function Wind() {
                         width={4} 
                         height={4}
                         style={{
-                            transform: `rotate(${windDir}deg) translate(50%)`,
+                            transform: `rotate(${windDir}deg) translate(10%, 1%)`,
                             height: "1%",
                         }} 
                     />

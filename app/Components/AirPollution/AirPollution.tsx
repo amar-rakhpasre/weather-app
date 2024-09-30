@@ -17,7 +17,7 @@ function AirPollution() {
         return <Skeleton className='h-[12rem] w-full col-span-2 md:col-span-full'/>
     }
 
-    const airQualityIndex = airQuality.list[0].main.aqi * 20;
+    const airQualityIndex = airQuality.list[0].main.aqi * 10;
 
     
     const filterIndex = airQualityIndexText.find((item) => {
@@ -30,7 +30,7 @@ function AirPollution() {
         <h2 className='flex items-center gap-2 font-medium'>
             {thermo}Air Pollusion</h2>
             <Progress value={airQualityIndex} max={100} className='progress'/>
-            <p>Air Quality is {filterIndex?.Description} </p>
+            <p>Air Quality is {filterIndex?.description} </p>
     </div>
   )
 }

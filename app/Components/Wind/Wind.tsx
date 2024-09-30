@@ -7,14 +7,16 @@ import React from 'react';
 
 function Wind() {
     const { forecast } = useGlobalContext();
-
+    // console.log(forecast)
     const windSpeed = Math.round(forecast?.wind?.speed);
     const windDir = forecast?.wind?.deg; // Keep the wind direction in degrees without modification
-
+    // console.log(windSpeed)
+    // console.log(windDir)
     // If wind data is not available, show a skeleton loader
     if (!windSpeed || windDir === undefined) {
         return <Skeleton className='h-[12rem] w-full' />;
     }
+    
 
     return (
         <div className='pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-8 dark:bg-dark-grey shadow-sm dark:shadow-none'>

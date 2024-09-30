@@ -13,26 +13,47 @@ export const kelvinToCelsius = (kelvin: number) =>{
 
 export const airQualityIndexText = [
     {
+        rating: 10,
+        description: "excellent"
+    },
+    {
         rating: 20,
-        Description: "good"
+        description: "good"
+    },
+    {
+        rating: 30,
+        description: "moderate"
     },
     {
         rating: 40,
-        Description: "fair"
+        description: "poor"
+    },
+    {
+        rating: 50,
+        description: "unhealthy for sensitive groups"
     },
     {
         rating: 60,
-        Description: "moderate"
+        description: "unhealthy"
+    },
+    {
+        rating: 70,
+        description: "very unhealthy"
     },
     {
         rating: 80,
-        Description: "poor"
+        description: "extremely unhealthy"
+    },
+    {
+        rating: 90,
+        description: "hazardous"
     },
     {
         rating: 100,
-        Description: "very poor"
-    },
+        description: "critical"
+    }
 ];
+
 
 
 export const unixToTime = (unix: number, timezone: number) => {

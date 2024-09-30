@@ -1,7 +1,7 @@
 "use client"
 
 import { useGlobalContext } from '@/app/context/globalContext'
-import { clearSky, cloudy, drizzleIcon, Mist, navigation, rain, snow } from '@/app/utils/Icons';
+import { clearSky, cloudy, drizzleIcon, MMist, navigation, rain, snow } from '@/app/utils/Icons';
 import { kelvinToCelsius } from '@/app/utils/misc';
 import { CloudFog, Cog, icons } from 'lucide-react';
 import moment from 'moment';
@@ -43,7 +43,7 @@ function Temperature() {
             case "Clouds":
                  return cloudy;
             case "Mist":
-                    return Mist;     
+                    return MMist;     
             default:
                 return clearSky;                
         }

@@ -26,12 +26,12 @@ function Sunset() {
     <div className='pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-5 dark:bg-dark-grey shadow-sm dark:shadow-none'>
             <div className="top">
               <h2 className='flex items-center gap-1 font-medium'>{sunset}Sunset</h2>
-              <p className='pt-2 text-2xl'>{sunsetTime}</p>
+              <p className='pt-2 text-2xl text-center'>{sunsetTime}</p>
             </div>
 
             <div className="top">
               <h2 className='flex items-center gap-1 font-medium'>{sunrise}Sunrise</h2>
-              <p className='pt-2 text-2xl'>{sunriseTime}</p>
+              <p className='pt-2 text-2xl text-center'>{sunriseTime}</p>
             </div>
     
             {/* <p className='flex items-center gap-1 font-medium'>{sunrise}Sunrise: {sunriseTime}</p> */}

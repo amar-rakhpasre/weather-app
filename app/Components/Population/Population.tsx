@@ -10,7 +10,7 @@ function Population() {
 
     const { city } = fiveDayForecast;
 
-    console.log(city)
+    // console.log(city)
 
     if (!fiveDayForecast || !city) {
         return <Skeleton className='h-[12rem] w-full' />;

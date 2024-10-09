@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Sunset from "./Components/Sunset/Sunset";
 import Temperature from "./Components/Temperature/Temperature";
 import Wind from "./Components/Wind/Wind";
+import UvIndex from "./Components/UvIndex/UvIndex";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
             <Sunset />
             <Wind />
             <DailyForecast />
+            <UvIndex />
           </div>
         </div>
       </div>

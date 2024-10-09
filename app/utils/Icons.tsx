@@ -40,6 +40,6 @@ import {
   export const eye = <Eye size={15} />;
   export const people = <UsersRound size={15} />;
   export const calender = <CalendarDays size={15} />;
-  export const sun = <SunDim size={15} />;
+  export const sun = <SunDim size={20} />;
   export const MMist = <CloudFog size={30} />;
   export const sunrise = <Sunrise  size={15}/>

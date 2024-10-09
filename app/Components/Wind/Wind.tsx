@@ -9,7 +9,7 @@ function Wind() {
     const { forecast } = useGlobalContext();
     // console.log(forecast)
     const windSpeed = Math.round(forecast?.wind?.speed);
-    const windDir = forecast?.wind?.deg; // Keep the wind direction in degrees without modification
+    const windDir = forecast?.wind?.deg * 6; // Keep the wind direction in degrees without modification
     // console.log(windSpeed)
     // console.log(windDir)
     // If wind data is not available, show a skeleton loader
@@ -23,17 +23,17 @@ function Wind() {
             <h2 className="flex items-center gap-2 font-medium">{wind}Wind: {windSpeed} m/s</h2>
 
             <div className="compass relative flex items-center justify-center">
-                <div className="image relative">
-                    <Image src="/compass_body.svg" className='relative bottom-5' alt="compass" width={80} height={80} />
+                <div className="image relative bottom-5">
+                    <Image src="/compass_body.svg" className='relative bottom-0' alt="compass" width={110} height={110} />
                     <Image 
                         src="/compass_arrow.svg" 
                         alt="compass arrow" 
-                        className='relative bottom-20 left-[47%] transition-transform duration-1000 ease-in-out dark:invert' 
-                        width={4} 
-                        height={4}
+                        className='relative bottom-20 left-[45%] transition-transform duration-1000 ease-in-out dark:invert' 
+                        width={6} 
+                        height={6}
                         style={{
-                            transform: `rotate(${windDir}deg) translate(10%, 1%)`,
-                            height: "1%",
+                            transform: `rotate(${windDir}deg) translate(-70%, 1%)`,
+                            height: "50%",
                         }} 
                     />
                 </div>

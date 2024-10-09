@@ -59,7 +59,11 @@ function DailyForecast() {
             {/* Render the forecast details here */}
             <div className="h-full gap-10 overflow-hidden">
               {todaysForecast.length < 3 ? (
-                <div>Loding...</div>
+                <div>
+                  <h1 className='text-[3rem] line-through flex justify-center text-rose-500'>
+                    No Data Available!
+                  </h1>
+                </div>
               ) : (
                 <div className="w-full">
                   <Carousel>
@@ -69,9 +73,9 @@ function DailyForecast() {
                             (forecast: { dt_txt: string; main: { temp: number } }) => {
                               return (
                                 <CarouselItem key={forecast.dt_txt}
-                                className='flex flex-col gap-4 cursor-grab'
+                                className='flex flex-col basis-[8.5rem] gap-4 cursor-grab'
                                 >
-                                  <p className='text-gray-300'>
+                                  <p className='text-black-300'>
                                     {moment(forecast.dt_txt).format("HH:mm")}
                                   </p>
                                   <p>{getIcon()}</p>

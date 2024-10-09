@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
         });
 
         const dailyData = await dailyRes.json();
-        // console.log(dailyData)
+        console.log(dailyData)
         return NextResponse.json(dailyData);
 
         

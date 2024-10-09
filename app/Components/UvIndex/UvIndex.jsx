@@ -11,6 +11,8 @@ function UvIndex() {
     
     const { uvIndex } = useGlobalContext()
 
+    // console.log(uvIndex)
+
     if (!uvIndex || !uvIndex.current) {
         return <Skeleton className='h-[12rem] w-full' />
     }
@@ -21,22 +23,22 @@ function UvIndex() {
     const uvIndexMax = uv_index;
 
     const uvIndexCategory = (uvIndex) => {
-      if (uvIndex <= 2) {
+      if (uvIndex <= 0) {
         return {
           text: "Low",
           protection: "No Protection required.",
         }
-      } else if (uvIndex <= 5) {
+      } else if (uvIndex <= 1) {
         return {
           text: "Moderate",
           protection: "stay in shade near midday.",
         }
-      } else if (uvIndex <= 7) {
+      } else if (uvIndex <= 1.5) {
         return {
           text: "HIgh",
           protection: "Wear a hat and sunglasses.",
         }
-      } else if (uvIndex <= 10) {
+      } else if (uvIndex <= 2) {
         return {
           text: "Very High",
           protection: "Apply sunscreen SPF 30+ every 2 hours.",

@@ -57,7 +57,7 @@ const GlobalContextProvider = ({ children }) => {
       const fetchUvIndex = async () => {
         try {
           const res = await axios.get("api/uv");  
-          console.log(res.data)
+          // console.log(res.data)
           setUvIndex(res.data);
         } catch (error) {
           console.log("Error fetching forecast data: ", error.message);
